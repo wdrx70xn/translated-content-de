@@ -1,14 +1,11 @@
 name: auto-merge
-
-on:
-  pull_request_target:
-
+'on':
+  pull_request_target: null
 permissions:
   contents: read
-
 jobs:
   auto-merge:
-    if: github.repository_owner == 'mdn'
+    if: github.repository_owner == 'wdrx70xn'
     uses: mdn/workflows/.github/workflows/auto-merge.yml@main
     secrets:
       GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
